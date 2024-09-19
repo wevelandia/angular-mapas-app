@@ -1,0 +1,13 @@
+<app-loading *ngIf="!isUserlocationReady; else mapReady" />
+
+<!-- Colocamos un ng-template para colocar allí todos los componentes del mapa, se visualiza para cuando el mapa esta disponible. -->
+<ng-template #mapReady>
+  <app-map-view />
+
+  <app-btn-my-location />
+
+  <app-search-bar />
+</ng-template>
+
+<!-- El Logo de Angular se puede colocar afuera del template -->
+<app-angular-logo />

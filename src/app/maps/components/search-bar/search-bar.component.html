@@ -1,0 +1,13 @@
+<div class="search-container">
+  <!-- A este input se le adiciona una referencia local, para poderle desarrollar el Debounce que va a ser usado que para cuando digite y deje por unas milesimas de segundo de escribir me tome ello como dato de busqueda. -->
+  <input
+    type="text"
+    class="form-control"
+    placeholder="Buscar lugar..."
+    #txtQuery
+    (keyup)="onQueryChanged(txtQuery.value)"
+  >
+
+  <app-search-results />
+
+</div>
